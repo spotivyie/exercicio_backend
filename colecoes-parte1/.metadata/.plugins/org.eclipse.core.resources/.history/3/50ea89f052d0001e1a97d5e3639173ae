@@ -1,0 +1,21 @@
+package parte;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Atividade {
+	
+	public static void main (String args[]) {
+		exemploAtividade();
+	}
+	
+	private static void exemploAtividade() {
+		Set<String> lista = new HashSet<>();
+		lista.add("Joao");
+		lista.add("Ana");
+		lista.add("Mateus");
+		lista.add("Graziele");
+		lista.add("Lilian");
+		System.out.println(lista);
+	}
+}

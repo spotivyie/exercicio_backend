@@ -1,0 +1,25 @@
+package parte;
+
+public class grupos {
+	
+	public static void main(String args[]) {
+		atividadeMod();
+	}
+	
+	private static void atividadeMod() {
+		Set<Pessoa> conjunto = new HashSet<Pessoa>();
+		
+		Pessoa a = new Pessoa(nome: "Joao", genero: "M");
+		Pessoa b = new Pessoa(nome: "Ana", genero: "F");
+		Pessoa c = new Pessoa(nome: "Mateus", genero: "M");
+		Pessoa d = new Pessoa(nome: "Graziele", genero: "F");
+		Pessoa e = new Pessoa(nome: "Lilian", genero: "F");
+		conjunto.add(a);
+		conjunto.add(b);
+		conjunto.add(c);
+		conjunto.add(d);
+		conjunto.add(e);
+		
+		System.out.println(conjunto);
+	}
+}

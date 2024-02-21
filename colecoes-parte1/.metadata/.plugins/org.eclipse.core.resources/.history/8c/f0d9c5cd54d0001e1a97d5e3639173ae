@@ -1,0 +1,30 @@
+package parte;
+
+import parte.ComparaNotaAluno;
+import parte.Pessoa;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+
+public class Atividade {
+
+    public static void main(String args[]) {
+        exemploListaSimplesOrdenadaComparatorAluno();
+    }
+
+    private static void exemploListaSimplesOrdenadaComparatorAluno() {
+        System.out.println("");
+        List<Pessoa> lista = new ArrayList<Pessoa>();
+
+        Pessoa a = new Pessoa("João da Silva");
+        Pessoa b = new Pessoa("Antonio Sousa");
+        Pessoa c = new Pessoa("Lúcia Ferreira");
+        lista.add(a);
+        lista.add(b);
+        lista.add(c);
+        System.out.println("Lista com ordenação" + lista);
+        System.out.println("");
+    }
+}

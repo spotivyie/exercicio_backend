@@ -1,0 +1,54 @@
+package parte;
+
+import parte.ComparaNotaAluno;
+import parte.Pessoa;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+
+public class Atividade {
+
+    public static void main(String args[]) {
+        exemploListaSimplesOrdenadaComparatorAluno();
+        exemploListaSimplesOrdenadaClasseExterna();
+    }
+
+    private static void exemploListaSimplesOrdenadaClasseExterna() {
+        System.out.println("****** exemploListaSimplesOrdenadaClasseExterna ******");
+        List<Pessoa> lista = new ArrayList<Pessoa>();
+
+        Pessoa a = new Pessoa("João da Silva", "Linux básico", 0);
+        Pessoa b = new Pessoa("Antonio Sousa", "OpenOffice", 0);
+        Pessoa c = new Pessoa("Lúcia Ferreira", "Internet", 0);
+        lista.add(a);
+        lista.add(b);
+        lista.add(c);
+        System.out.println(lista);
+        Collections.sort(lista);
+        System.out.println(lista);
+        System.out.println("");
+    }
+
+    private static void exemploListaSimplesOrdenadaComparatorAluno() {
+        System.out.println("****** exemploListaSimplesOrdenadaComparatorAluno ******");
+        List<Pessoa> lista = new ArrayList<Pessoa>();
+
+        Pessoa a = new Pessoa("João da Silva", "Linux básico", 20);
+        Pessoa b = new Pessoa("Antonio Sousa", "OpenOffice", 30);
+        Pessoa c = new Pessoa("Lúcia Ferreira", "Internet", 10);
+        lista.add(a);
+        lista.add(b);
+        lista.add(c);
+        System.out.println("Lista sem ordenação" + lista);
+        Collections.sort(lista);
+        System.out.println("Lista com ordenação" + lista);
+
+        ComparaNotaAluno comparaNotaAluno = new ComparaNotaAluno();
+        Collections.sort(lista, comparaNotaAluno);
+        System.out.println("Lista com ordenação por nota" + lista);
+
+        System.out.println("");
+    }
+}

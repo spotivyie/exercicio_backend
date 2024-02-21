@@ -1,0 +1,12 @@
+package parte;
+
+import java.util.Comparator;
+
+public class ComparaNotaAluno implements Comparator<Pessoa> {
+
+    @Override
+    public int compare(Pessoa o1, Pessoa o2) {
+        return Double.compare(o2.getGenero(), o1.getGenero());
+    }
+}
+
