@@ -1,7 +1,7 @@
 package Abstrata;
 
-public class PessoaJuridica extends PessoaFisica {
-	
+public class PessoaJuridica extends Pessoa{
+
 	private String cnpj;
 
 	public String getCnpj() {
